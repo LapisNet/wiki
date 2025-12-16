@@ -5,10 +5,11 @@ export default defineAdditionalConfig({
 	themeConfig: {
 		nav: [
 			{
-				text: '友情链接',
+				text: '通过 IDE 编辑',
 				items: [
-					{ text: '官网', link: 'https://lapis-net.top' },
-					{ text: 'MCiSEE', link: 'https://mcisee.top' },
+					{ text: 'vscode.dev', link: 'https://vscode.dev/github/LapisNet/wiki' },
+					{ text: 'GitHub Codespaces', link: 'https://github.dev/LapisNet/wiki' },
+					{ text: 'VS Code', link: 'vscode://vscode.git/clone?url=https://github.com/LapisNet/wiki' }
 				]
 			}
 		],
@@ -18,13 +19,7 @@ export default defineAdditionalConfig({
 		},
 
 		footer: {
-			message: '除非另有声明，本网站内容采用 CC BY-SA 4.0 授权',
-			copyright: 'Copyright © 2025-present LapisNet Wiki'
-		},
-
-		docFooter: {
-			prev: '上一页',
-			next: '下一页'
+			message: '除非另有声明，本网站内容采用 CC BY-SA 4.0 授权'
 		},
 
 		outline: {
@@ -111,7 +106,32 @@ export default defineAdditionalConfig({
 			}
 		},
 
-		sidebar: [],
+		sidebar: [
+			{
+				text: '导航',
+				items: [
+					{
+						text: '首页',
+						link: '/'
+					},
+					{
+						text: '最近更改 (TODO)',
+						link: '/recent-changes'
+					},
+					{
+						text: '随机页面 (TODO)',
+						link: '/random'
+					}
+				]
+			},
+			{
+				text: '友情链接',
+				items: [
+					{ text: '官网', link: 'https://lapis-net.top' },
+					{ text: 'MCiSEE', link: 'https://mcisee.top' },
+				]
+			}
+		],
 
 		notFound: {
 			title: '页面未找到',
