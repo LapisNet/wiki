@@ -67,14 +67,25 @@ export default defineConfig({
 		},
 
 		footer: {
-			message: '除非另有声明，本网站内容采用 CC BY-SA 4.0 授权',
 			copyright: 'Copyright © 2025-present LapisNet Wiki'
+		},
+
+		docFooter: {
+			prev: false,
+			next: false
 		},
 
 		search: {
 			provider: 'local'
 		},
 
-		sidebar: []
+		sidebar: [],
+
+		socialLinks: [
+			{ icon: 'bilibili', link: 'https://space.bilibili.com/5308176' },
+			{ icon: 'qq', link: 'https://qm.qq.com/q/i0F8L4P1jW' },
+			{ icon: 'github', link: 'https://github.com/LapisNet/wiki' },
+			{ icon: 'discord', link: 'https://discord.gg/m6BwyRp7Mv' }
+		]
 	}
 })
