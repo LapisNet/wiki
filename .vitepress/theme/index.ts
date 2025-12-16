@@ -2,14 +2,20 @@
 import { h } from 'vue';
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
+import './custom.scss';
 import giscus from '@giscus/vue';
+import { registerComponents } from '../../components';
+
+import QuickTools from './components/QuickTools.vue';
 
 export default {
 	extends: DefaultTheme,
 	Layout: () => {
 		return h(DefaultTheme.Layout, null, {
 			// https://vitepress.dev/guide/extending-default-theme#layout-slots
+			'sidebar-nav-after': h(QuickTools),
 			'doc-after': () => h(giscus, {
+				class: 'giscus',
 				repo: 'LapisNet/wiki',
 				repoId: 'R_kgDOQpR-oA',
 				category: 'comments',
@@ -25,5 +31,7 @@ export default {
 			})
 		});
 	},
-	enhanceApp({ app, router, siteData }) {}
+	enhanceApp({ app, router, siteData }) {
+		registerComponents(app);
+	}
 } satisfies Theme;

@@ -1,0 +1,79 @@
+:root {
+	--vp-nav-bg-color: transparent;
+	--vp-c-bg-elv: #fff7;
+}
+
+.dark {
+	--vp-c-bg-elv: #20212777;
+}
+
+html {
+	.VPNavBar {
+		.wrapper {
+			backdrop-filter: blur(4px);
+			background-color: var(--vp-c-bg-elv);
+		}
+	}
+	.VPLocalNav {
+		backdrop-filter: blur(4px);
+		background-color: var(--vp-c-bg-elv) !important;
+	}
+	.VPMenu {
+		background-color: #202127cc !important;
+	}
+	.VPFooter.has-sidebar {
+		border: none;
+		display: block !important;
+	}
+
+	.giscus {
+		display: block;
+		padding-top: 0.8em;
+		margin-top: 1.25em;
+		border-top: 2px solid var(--vp-c-divider);
+	}
+
+	@media (min-width: 768px) {
+		.VPDoc {
+			padding: 0 !important;
+		}
+	}
+
+	.vp-doc {
+		a:not(.header-anchor):not(.infobox a) {
+			position: relative;
+			text-decoration: none;
+			code {
+				border: 1px solid currentColor;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 2px;
+				background-color: currentColor;
+				transition: width 0.2s ease-in-out;
+			}
+			&:hover, &.active {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+		h2 {
+			border: none;
+			margin: 12px 0;
+		}
+		h3 {
+			margin: 8px 0;
+		}
+	}
+
+	&.dark {
+		.VPNavBar:not(.home.top) .content-body {
+			background-color: var(--vp-c-bg-elv) !important;
+		}
+	}
+}

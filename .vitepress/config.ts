@@ -57,7 +57,7 @@ export default defineConfig({
 	},
 
 	themeConfig: {
-		logo: '/public/favicon.ico',
+		logo: '/favicon.ico',
 		nav: [],
 
 		externalLinkIcon: true,
