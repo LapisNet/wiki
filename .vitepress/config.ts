@@ -65,7 +65,13 @@ export default defineConfig({
 		},
 
 		footer: {
+			copyright: 'Copyright © 2025-present LapisNet Wiki',
 			message: '除非另有声明，本网站内容采用 CC BY-SA 4.0 授权'
+		},
+
+		docFooter: {
+			next: false,
+			prev: false
 		},
 
 		outline: {
