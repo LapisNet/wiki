@@ -6,6 +6,7 @@ export default defineConfig({
 
 	title: 'LapisNet Wiki',
 	description: '',
+	base: './',
 
 	lastUpdated: true,
 	cleanUrls: true,
