@@ -7,7 +7,7 @@ export default defineConfig({
 	title: 'LapisNet Wiki',
 	lang: 'zh',
 	description: '',
-	base: '/',
+	base: '/wiki/',
 
 	lastUpdated: true,
 	cleanUrls: true,
