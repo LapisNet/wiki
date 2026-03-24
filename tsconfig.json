@@ -5,6 +5,9 @@
     "target": "es2015",
 
     "baseUrl": ".",
+    "paths": {
+      "@": ["./.vitepress/*"]
+    },
 
     "moduleResolution": "bundler"
   },

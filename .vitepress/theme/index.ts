@@ -4,7 +4,7 @@ import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import './custom.scss';
 import giscus from '@giscus/vue';
-import { registerComponents } from '../../components';
+import { registerComponents } from './comps';
 
 import QuickTools from './components/QuickTools.vue';
 

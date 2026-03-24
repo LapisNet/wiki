@@ -5,6 +5,7 @@ const components = [
 	{ name: 'wikipedia', filename: 'Wikipedia' },
 	{ name: 'wzh', filename: 'Wzh' },
 
+	{ name: 'gallery', filename: 'Gallery' },
 	{ name: 'hide', filename: 'Hide' },
 	{ name: 'infobox', filename: 'Infobox'},
 	{ name: 'Wip', filename: 'Wip' },
@@ -12,7 +13,7 @@ const components = [
 ];
 
 export const registerComponents = (app: App) => {
-	components.forEach(({ name, filename }) => {
-		app.component(name, defineAsyncComponent(() => import(`./${filename}.vue`)));
+	if(!import.meta.env.SSR) components.forEach(({ name, filename }) => {
+		app.component(name, defineAsyncComponent(() => import(`../../components/${filename}.vue`)));
 	});
 }
